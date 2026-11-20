@@ -1,0 +1,206 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+/* home container class */
+.home-container{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to left , rgba(0,0,0,0.5) , rgba(0,0,0,0.5)) ,url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 0px 10%;
+    text-align: center;
+    color: white;
+}
+
+.home-container header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.home-container header .logo{
+    font-size: 2em;
+    font-weight: bold;
+}
+.home-container header nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0px 5px;
+    letter-spacing: 2px;
+}
+
+.home-container header button{
+    padding: 14px 40px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.home-container h4 {
+    font-size: 1.5em;
+    color: orange;
+    margin: 30px 0px;
+}
+
+.home-container h1{
+    font-size: 6em;
+    margin: 30px 0px;
+    letter-spacing: 4px;
+}
+.home-container h1 span{
+    color: red;
+    font-weight: bold;
+}
+
+.home-container p{
+    width: 50%;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
+.home-container .buttons  button{
+    padding: 15px 30px ;
+    background-color: red;
+    border: none;
+    color: white;
+    margin: 0px 10px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.home-container .buttons  button:last-child{
+    background: transparent;
+    border: 1px solid white;
+}
+
+.home-container i{
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+
+/* about  */
+
+#about{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 10%;
+}
+#about .top img{
+    width: 100px;
+}
+#about .top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+#about .top .texts ,#about .top .images {
+    width: 50%;
+}
+
+#about .top .texts  {
+    text-align: center;
+}
+#about .top .texts p:first-child{
+    color: orange;
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+}
+
+#about .top .texts p:first-child::before{
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    left: 150px;
+    top: 17px;
+}
+#about .top .texts p:first-child::after{
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    right: 150px;
+    top: 17px;
+}
+
+/* step 2 */
+#checked{
+    position: absolute;
+    visibility: hidden;
+}
+.fa-bars{
+    visibility: hidden;
+}
+
+/* step4 */
+
+#checked:checked ~ nav{
+    display: block;
+}
+
+/* responsive */
+
+@media screen and (max-width : 1024px){
+    /* body{
+        background: red;
+    } */
+    .home-container{
+        height: 100%;
+    }
+    .home-container .buttons  button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* step 3 */
+    .home-container header nav{
+        top: 100px;
+        padding: 20px;
+        background: white;
+        position: absolute;
+        right: 25px;
+        transition: all 0.2s ease-in-out;
+        display: none;
+    }
+    .home-container header nav a{
+        display: block;
+        margin-bottom: 5px;
+        color: black;
+        z-index: 12;
+    }
+    .fa-bars{
+    visibility: visible;
+}
+#about .top{
+    display: block;
+}
+#about .top .texts ,#about .top .images {
+    width: 90%;
+    margin: auto;
+}
+
+#about .top img{
+    width: 300px;
+    height: 300px;
+    margin: 10PX;
+}
+
+
+}
